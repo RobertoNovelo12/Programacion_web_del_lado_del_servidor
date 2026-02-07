@@ -1,52 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Formulario de contacto</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulario de contacto</title>
+  </head>
+  <body>
+    <form action="" class="formulario">
+      <h1>Contáctanos</h1>
+      <div class="nom_ape">
+        <label for="name"
+          >Nombre <span title="Este campo es obligatorio">*</span></label
+        >
+        <input type="text" id="name" name="name" required />
 
-<!-- Es opcional eliminar estos estilos o personalizarlos en su propia hoja de estilos 👍 -->
-  <style>
-    .autor { font-size: 11px; text-align: center; }
-    .autor a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <label for="apellido"
+          >Apellido <span title="Este campo es obligatorio">*</span></label
+        >
+        <input type="text" id="apellido" name="apellido" required />
+      </div>
+      <label for="email"
+        >Dirección de correo electrónico
+        <span title="Este campo es obligatorio">*</span></label
+      >
+      <input type="email" id="email" name="email" required />
 
-Contáctanos
+      <p>
+        Tipo de consulta
+        <span title="Por favor, selecciona un tipo de consulta">*</span>
+      </p>
+      <div class="consul">
+        <label>
+          <input type="radio" name="q_type" value="general" required />
+          Consulta general
+        </label>
 
-Nombre
-Este campo es obligatorio
+        <label>
+          <input type="radio" name="q_type" value="soporte" />
+          Solicitud de soporte
+        </label>
+      </div>
+      <label for="mensaje"
+        >Mensaje <span title="Este campo es obligatorio">*</span></label
+      >
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      <label for="autorizo">
+        <input type="checkbox" name="" id="" /> Autorizó para ser contactado por
+        el equipo <span title="Para enviar este formulario, por favor consiente ser contactado">*</span>
+      </label>
 
-Apellido
-Este campo es obligatorio
+      <button type="submit">Enviar</button>
 
-Dirección de correo electrónico
-Por favor, introduce una dirección de correo electrónico válida
-Este campo es obligatorio
-
-Tipo de consulta
-Consulta general
-Solicitud de soporte
-Por favor, selecciona un tipo de consulta
-
-Mensaje
-Este campo es obligatorio
-
-Autorizó para ser contactado por el equipo
-Para enviar este formulario, por favor consiente ser contactado
-
-Enviar
-
-¡Mensaje enviado!
-Gracias por completar el formulario. ¡Nos pondremos en contacto pronto!
-  
-  <div class="autor">
-    Formulario de contacto @2025</a>. 
-    Desarrollado por <a href="#">Tu nombre</a>.
-  </div>
-</body>
+      <div class="autor">
+        Formulario de contacto ©2025. <br />
+        Desarrollado por <a href="#">Jorge Roberto Novelo Poot</a>.
+      </div>
+    </form>
+  </body>
 </html>
