@@ -1,0 +1,69 @@
+## El desafío
+
+Tu desafío es construir este formulario de contacto y lograr que se vea lo más cercano posible al diseño. Presta especial atención a hacer que este formulario sea accesible. Éste desafío permitirá para identificar el nivel de conocimiento en programacion web.
+
+Además de construir el frontend del formulario de contacto, también deberás implementar la parte del back-end para manejar el envío y recepción de información desde una base de datos. Aquí están los requisitos adicionales:
+
+### Tareas del Back-End
+
+1. **Configuración del servidor**: Configura un servidor utilizando PHP. (XAMPP o Laragon)
+2. **Base de satos**: Utiliza MySQL para crear la bbd y almacenar los datos del formulario.
+3. **Validación de datos**: Asegúrate de validar los datos del formulario en el servidor y manejar los errores adecuadamente.(Puedes usar el framework de bootstrap)
+4. **Alojamiento**: Configura tu base de datos y un servidor gratuito para el alojamiento compatible con PHP y MySQL.
+
+### Requisitos de Usuario
+
+Tus usuarios deberían poder:
+
+- Completar el formulario y ver un mensaje de éxito al enviarlo correctamente
+- Recibir mensajes de validación del formulario si:
+  - Se ha omitido un campo obligatorio
+  - La dirección de correo electrónico no está correctamente formateada
+- Completar el formulario solo usando su teclado
+- Tener los inputs, mensajes de error y el mensaje de éxito anunciados en su lector de pantalla
+- Agregar estados de hover y focus para todos los elementos interactivos en la página
+- Enviar el formulario y almacenar los datos en la base de datos.
+- Recuperar y ver todos los envíos del formulario desde la base de datos.
+
+-Asegúrate de documentar tu configuración y cualquier instrucción especial para el uso o acceso al site del formulario  para que el docente puedan entender y ejecutar tu proyecto fácilmente.
+
+## Dónde encontrar todo
+
+Tu tarea es construir el proyecto de acuerdo a los diseños dentro de la carpeta '/diseño'. Encontrarás versiones tanto para móvil como para escritorio del diseño.
+
+Los diseños están en formato JPG estático. Usar JPGs significará que necesitarás usar tu mejor juicio para estilos como 'font-size', 'padding' y 'margin'.
+
+En la carpeta '/assets' hay imágenes ya están exportadas para el tamaño de pantalla correcto y optimizadas.
+
+También están inlcuidos los archivos de fuentes variables y estáticas para las fuentes requeridas para este proyecto. Puedes elegir enlazar a Google Fonts o usar los archivos de fuentes locales para alojar las fuentes tú mismo. Tomar en cuenta que se han eliminado los archivos de fuentes estáticas para los pesos de fuente que no son necesarios para este proyecto.
+
+También hay un archivo 'guía estilo.md' que contiene la información que necesitarás, como la paleta de colores y las fuentes.
+
+## Crea tu proyecto
+
+Tienes la libertad de usar cualquier flujo de trabajo con el que te sientas cómodo. A continuación se sugiere un proceso:
+
+1. Inicializa tu proyecto como un repositorio público en [GitHub](https://github.com/). Crear un repositorio hará que sea más fácil compartir tu código con la comunidad si necesitas ayuda. Si no estás seguro de cómo hacerlo, [leer este recurso de Try Git](https://try.github.io/).
+2. Configura tu repositorio para publicar tu código en una dirección web. Esto también será útil si necesitas ayuda durante un desafío, ya que puedes compartir la URL de tu proyecto con la URL de tu repositorio. Hay varias formas de hacer esto, y proporcionamos algunas recomendaciones a continuación.
+3. Revisa los diseños para comenzar a planificar cómo abordarás el proyecto. Este paso es crucial para ayudarte a pensar en las clases de CSS para crear estilos reutilizables.
+4. Antes de agregar cualquier estilo, estructura tu contenido con HTML. Escribir tu HTML primero puede ayudar a centrar tu atención en crear contenido bien estructurado.
+5. Escribe los estilos base para tu proyecto, incluyendo estilos generales de contenido, como `font-family` y `font-size`.
+6. Comienza a agregar estilos desde la parte superior de la página y trabaja hacia abajo. Solo pasa a la siguiente sección una vez que estés contento con el área en la que estás trabajando.
+7. Configura tu servidor utilizando PHP. Puedes usar XAMPP o Laragon para configurar un entorno de desarrollo local. [Guía de XAMPP](https://www.apachefriends.org/es/index.html) | [Guía de Laragon](https://laragon.org/)
+8. Crea una base de datos en MySQL para almacenar los datos del formulario. Define las tablas y campos necesarios para guardar la información del formulario. [Introducción a MySQL](https://dev.mysql.com/doc/refman/8.0/en/tutorial.html)
+9. Implementa la lógica de backend en PHP para manejar el envío del formulario. Asegúrate de validar los datos del formulario en el servidor y manejar los errores adecuadamente. [Documentación de PHP](https://www.php.net/manual/es/tutorial.forms.php)
+10. Escribe consultas SQL para insertar los datos del formulario en la base de datos y para recuperar los datos cuando sea necesario. [Tutorial de SQL](https://www.w3schools.com/sql/)
+11. Crea una página en PHP para mostrar los datos enviados del formulario. Esta página debe consultar la base de datos y mostrar los resultados en un formato legible. [PHP y MySQL](https://dcreations.es/cursos/curso-introduccion-php-gratis/formularios-php-html#recopilacion-y-envio-de-datos-de-formularios-en-php)
+12. Prueba tu formulario para asegurarte de que los datos se envían y se almacenan correctamente en la base de datos, y que los datos se pueden recuperar y mostrar sin problemas. [Pruebas de PHP]
+
+## Desplegando tu proyecto
+
+Como se mencionó anteriormente, hay muchas formas de alojar tu proyecto de forma gratuita. Por ejemplo:
+
+- [Infinityfree]: (https://www.infinityfree.com/)
+
+
+## Crea un `README.md` personalizado
+
+Una vez que hayas agregado tu información a la plantilla 'solución', renombra el archivo  a `README.md`. Eso hará que aparezca como el archivo README de tu repositorio.
+
