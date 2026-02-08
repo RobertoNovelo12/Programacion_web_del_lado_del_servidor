@@ -27,6 +27,60 @@ body{
     min-height: 100vh;
     background: hsl(148, 38%, 91%);
     padding: 20px;
+    position: relative;
+}
+
+/* Notificación de éxito */
+.success-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px);
+    background-color: hsl(187, 24%, 22%);
+    color: white;
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.4s ease;
+    max-width: 500px;
+    width: calc(100% - 40px);
+}
+
+.success-notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.success-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.success-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.success-text {
+    flex: 1;
+}
+
+.success-text strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.success-text p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+    opacity: 0.95;
 }
 
 h1 {

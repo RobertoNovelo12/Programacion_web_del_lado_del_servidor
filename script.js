@@ -19,6 +19,24 @@ const checkboxError = document.getElementById("checkbox-error");
 const consulContainer = document.querySelector(".consul");
 const checkboxCustom = document.querySelector(".checkbox-custom");
 
+// Obtener notificación de éxito
+const successNotification = document.getElementById("successNotification");
+
+// Función para mostrar notificación de éxito
+function showSuccessNotification() {
+  successNotification.classList.add("show");
+  
+  // Ocultar después de 5 segundos
+  setTimeout(() => {
+    successNotification.classList.remove("show");
+  }, 5000);
+}
+
+// Función para limpiar el formulario
+function resetForm() {
+  form.reset();
+}
+
 // Función para validar email
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -172,6 +190,27 @@ form.addEventListener("submit", function (e) {
 
   // Si todo es válido, enviar el formulario
   if (isValid) {
-    form.submit();
+    // Crear FormData para enviar con AJAX
+    const formData = new FormData(form);
+    
+    // Enviar con fetch
+    fetch('guardar.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      // Mostrar notificación de éxito
+      showSuccessNotification();
+      
+      // Limpiar el formulario
+      resetForm();
+      
+      console.log('Respuesta del servidor:', data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Hubo un error al enviar el formulario. Por favor, intenta de nuevo.');
+    });
   }
 });
