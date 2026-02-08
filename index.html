@@ -18,21 +18,28 @@
     <form action="" class="formulario">
       <h1>Contáctanos</h1>
       <div class="nom_ape">
-        <label for="name"
-          >Nombre <span title="Este campo es obligatorio">*</span></label
-        >
-        <input type="text" id="name" name="name" required />
+        <div>
+          <label for="name"
+            >Nombre <span title="Este campo es obligatorio">*</span></label
+          >
+          <input type="text" id="name" name="name" required />
+          <span class="error-message" id="name-error">Este campo es obligatorio</span>
+        </div>
 
-        <label for="apellido"
-          >Apellido <span title="Este campo es obligatorio">*</span></label
-        >
-        <input type="text" id="apellido" name="apellido" required />
+        <div>
+          <label for="apellido"
+            >Apellido <span title="Este campo es obligatorio">*</span></label
+          >
+          <input type="text" id="apellido" name="apellido" required />
+          <span class="error-message" id="apellido-error">Este campo es obligatorio</span>
+        </div>
       </div>
       <label for="email"
         >Dirección de correo electrónico
         <span title="Este campo es obligatorio">*</span></label
       >
       <input type="email" id="email" name="email" required />
+      <span class="error-message" id="email-error">Por favor, introduce una dirección de correo electrónico válida</span>
 
       <p>
         Tipo de consulta
@@ -41,22 +48,29 @@
       <div class="consul">
         <label>
           <input type="radio" name="q_type" value="general" required />
+          <span class="radio-custom"></span>
           Consulta general
         </label>
 
         <label>
           <input type="radio" name="q_type" value="soporte" />
+          <span class="radio-custom"></span>
           Solicitud de soporte
         </label>
       </div>
+      <span class="error-message" id="query-error">Por favor, selecciona un tipo de consulta</span>
       <label for="mensaje"
         >Mensaje <span title="Este campo es obligatorio">*</span></label
       >
       <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-      <label for="autorizo">
-        <input type="checkbox" name="" id="" /> Autorizó para ser contactado por
+      <span class="error-message" id="mensaje-error">Este campo es obligatorio</span>
+      <label for="autorizo" class="checkbox-label">
+        <input type="checkbox" name="autorizo" id="autorizo" required />
+        <span class="checkbox-custom"></span>
+        Autorizó para ser contactado por
         el equipo <span title="Para enviar este formulario, por favor consiente ser contactado">*</span>
       </label>
+      <span class="error-message" id="checkbox-error">Para enviar este formulario, por favor consiente ser contactado</span>
 
       <button type="submit">Enviar</button>
 
@@ -65,5 +79,6 @@
         Desarrollado por <a href="#">Jorge Roberto Novelo Poot</a>.
       </div>
     </form>
+    <script src="script.js"></script>
   </body>
 </html>

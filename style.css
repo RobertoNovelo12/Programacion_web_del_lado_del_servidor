@@ -26,22 +26,316 @@ body{
     align-items: center;
     min-height: 100vh;
     background: hsl(148, 38%, 91%);
+    padding: 20px;
 }
 
 h1 {
     font-weight: 700;
+    font-size: 32px;
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 32px;
 }
 
 .formulario{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 300px;
-    padding: 20px;
+    width: 100%;
+    max-width: 736px;
+    padding: 40px;
     background: white;
-    border-radius: 8px;
+    border-radius: 16px;
 }
 
-label, input, textarea {
+/* Sección nombre y apellido */
+.nom_ape {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.nom_ape > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.nom_ape label {
     font-weight: 400;
+    font-size: 16px;
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 8px;
+}
+
+.nom_ape input {
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 8px;
+    color: hsl(187, 24%, 22%);
+    transition: all 0.3s ease;
+}
+
+/* Labels generales */
+label {
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Campos de texto y textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 8px;
+    color: hsl(187, 24%, 22%);
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+    width: 100%;
+    background-color: white;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    border-color: hsl(169, 82%, 27%);
+    cursor: pointer;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: hsl(169, 82%, 27%);
+    cursor: text;
+}
+
+input[type="text"]:active,
+input[type="email"]:active,
+textarea:active {
+    border-color: hsl(169, 82%, 27%);
+}
+
+/* Estado de error para inputs */
+input.error,
+textarea.error {
+    border-color: hsl(0, 66%, 54%);
+}
+
+input.error:hover,
+textarea.error:hover,
+input.error:focus,
+textarea.error:focus {
+    border-color: hsl(0, 66%, 54%);
+}
+
+/* Mensajes de error */
+.error-message {
+    display: none;
+    color: hsl(0, 66%, 54%);
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 105px;
+}
+
+/* Párrafo de tipo de consulta */
+p {
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 16px;
+}
+
+/* Asterisco requerido */
+span[title] {
+    color: hsl(169, 82%, 27%);
+}
+
+/* Radio buttons */
+.consul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.consul label {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    margin-bottom: 0;
+    background-color: white;
+}
+
+.consul label:hover {
+    border-color: hsl(169, 82%, 27%);
+    cursor: pointer;
+}
+
+/* Error state para radio buttons */
+.consul.error label {
+    border-color: hsl(0, 66%, 54%);
+}
+
+.consul input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid hsl(186, 15%, 59%);
+    border-radius: 50%;
+    margin-right: 12px;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.consul input[type="radio"]:checked ~ .radio-custom {
+    border-color: hsl(169, 82%, 27%);
+}
+
+.consul input[type="radio"]:checked ~ .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: hsl(169, 82%, 27%);
+    border-radius: 50%;
+}
+
+.consul label:has(input[type="radio"]:checked) {
+    background-color: hsl(148, 38%, 91%);
+    border-color: hsl(169, 82%, 27%);
+}
+
+/* Checkbox */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.checkbox-label:hover .checkbox-custom {
+    border-color: hsl(169, 82%, 27%);
+}
+
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid hsl(186, 15%, 59%);
+    border-radius: 2px;
+    margin-right: 12px;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"]:checked ~ .checkbox-custom {
+    background-color: hsl(169, 82%, 27%);
+    border-color: hsl(169, 82%, 27%);
+}
+
+.checkbox-label input[type="checkbox"]:checked ~ .checkbox-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -60%) rotate(45deg);
+}
+
+/* Error state para checkbox */
+.checkbox-custom.error {
+    border-color: hsl(0, 66%, 54%);
+}
+
+/* Botón */
+button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    background-color: hsl(169, 82%, 27%);
+    color: white;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+button[type="submit"]:hover {
+    background-color: hsl(187, 24%, 22%);
+    cursor: pointer;
+}
+
+button[type="submit"]:active {
+    background-color: hsl(187, 24%, 22%);
+}
+
+/* Autor */
+.autor {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .formulario {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .nom_ape,
+    .consul {
+        grid-template-columns: 1fr;
+    }
 }
