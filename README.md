@@ -35,6 +35,9 @@ Asegúrate de documentar tu configuración y cualquier instrucción especial par
 ![](./image2.png)
 ![](./image.png)
 
+Pagina web en version de escritorio y movil
+
+![](./xampp.png)
 Captura de pantalla del uso de xampp para poder visualizar el formulario
 
 ![](./myphpadmin.png)
