@@ -41,6 +41,10 @@ Captura de pantalla del uso de xampp para poder visualizar el formulario
 
 Captura de pantalla de los datos recuperados con myphpadmin desde el host de infinity free
 
+![](./hover.png)
+
+Haciendo hover al botón de Enviar para que se previsualice el efecto hover, de cambio de color en el botón.
+
 Agrega una captura de pantalla de tu solución. La forma más fácil de hacerlo es usar un navegador para ver tu proyecto, hacer clic derecho en la página y seleccionar "Tomar una captura de pantalla". Puedes elegir una captura de pantalla de altura completa o una recortada según la longitud de la página. Si es muy larga, puede ser mejor recortarla.
 
 
@@ -50,11 +54,11 @@ Luego recorta/optimiza/edita tu imagen como desees, agrégala a tu carpeta de pr
 ### Enlaces
 
 - URL en GITHUB de tu proyecto:
-- URL del site:[Agrega la URL del sitio en vivo aquí](http://formulario-rogramacion-web.42web.io/)
+- URL del site: http://formulario-rogramacion-web.42web.io/
 
 ## Autor
 - Jorge Roberto Novelo Poot
 - 221k0186
 - 8-B
 - Sitio  - [Formulario de programación web](http://formulario-rogramacion-web.42web.io/)
-- Github - [@tuusuario](https://github.com/RobertoNovelo12/Programacion_web_del_lado_del_servidor)
+- Github - [@RobertoNovelo12](https://github.com/RobertoNovelo12/Programacion_web_del_lado_del_servidor)
